@@ -1,10 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: rowan888/evelyn-wharf-cycles-website
   branch: main
-
-# Lets you run the CMS locally (via `npx decap-server`) without logging in.
-# Netlify Identity is still used automatically once this is deployed live.
-local_backend: true
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
