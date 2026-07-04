@@ -90,6 +90,7 @@ collections:
             widget: list
             fields:
               - { name: name, label: Bike name, widget: string }
+              - { name: price, label: Price, widget: string, hint: "e.g. £350 or POA", required: false }
               - { name: description, label: Description, widget: text }
               - { name: image, label: Image, widget: image }
               - { name: status, label: Status, widget: string, default: "Available" }

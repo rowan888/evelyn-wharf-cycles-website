@@ -127,10 +127,14 @@ function renderBikesPage(bikes) {
   if (grid && Array.isArray(bikes.bikes)) {
     grid.innerHTML = bikes.bikes.map(function (bike) {
       var statusClass = bike.status && bike.status.toLowerCase() === 'sold' ? 'is-sold' : 'is-available';
+      var priceMarkup = bike.price ? '<p class="price">' + escapeHtml(bike.price) + '</p>' : '';
       return '<article class="gallery-card ' + statusClass + '">'
+        + '<div class="gallery-card-image">'
         + '<img src="' + escapeAttribute(bike.image) + '" alt="' + escapeAttribute(bike.name) + '">'
+        + '</div>'
         + '<div class="gallery-card-body">'
         + '<h3>' + escapeHtml(bike.name) + '</h3>'
+        + priceMarkup
         + '<p>' + escapeHtml(bike.description) + '</p>'
         + '<p class="status-tag">' + escapeHtml(bike.status || 'Available') + '</p>'
         + '</div></article>';
