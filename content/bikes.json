@@ -4,14 +4,14 @@
   "bikes": [
     {
       "name": "Vintage Road Bike",
-      "price": "£350",
+      "price": "£180",
       "description": "Steel frame, freshly serviced, ready to ride.",
-      "image": "https://ibb.co/n8P6pLnr",
+      "image": "/images/uploads/img_3191.jpg",
       "status": "Available"
     },
     {
       "name": "City Commuter",
-      "price": "£220",
+      "price": "£150",
       "description": "Comfortable upright position and reliable brakes.",
       "image": "/images/uploads/img_3192.jpg",
       "status": "Available"
