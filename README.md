@@ -11,7 +11,7 @@ Files created
 
 - `index.html` — home page
 - `about.html` — about page
-- `services.html` — services and pricing summary
+- `services.html` — services summary
 - `contact.html` — contact form (mailto)
 - `css/styles.css` — site styles
 - `images/` — add `ewc-logo.jpg` here (not included in repo by default)
@@ -20,7 +20,7 @@ Notes
 
 - The contact form uses `mailto:`; replace with a server endpoint or JS handler if you want saved submissions.
 - Update contact details in each page to match the real shop info.
-- Decap CMS is available at `/admin/` once the site is deployed to Netlify (see setup below).
+- A content editor is available at `/admin/` once the site is deployed to Netlify (see setup below).
 - Content lives in `content/site.json`, `content/services.json`, and `content/bikes.json`.
 - Because the pages load JSON content with `fetch()`, open the site through a web server or deployed host, not by double-clicking the HTML files.
 - The code lives on GitHub at [rowan888/evelyn-wharf-cycles-website](https://github.com/rowan888/evelyn-wharf-cycles-website).
@@ -30,8 +30,8 @@ How the client edits content
 1. Open `/admin/` on the live site.
 2. Click "Login with GitHub" and sign in with a GitHub account that has access to the repository.
 3. Use "General site content" to edit the homepage, About, Contact, and footer text.
-4. Use "Services and prices" to change service names, descriptions, and prices.
-5. Use "Bike listings" to add a new bike, upload photos, change prices, mark items sold, or remove old listings.
+4. Use "Services" to update service names and descriptions.
+5. Use "Bike listings" to add a new bike, upload photos, mark items sold, or remove old listings.
 6. Click "Publish" to save the changes — this commits directly to the GitHub repository, and Netlify automatically rebuilds the live site.
 
 Recommended setup steps for Netlify
@@ -43,7 +43,7 @@ Recommended setup steps for Netlify
 
 How to allow the admin to log in (GitHub login via Netlify OAuth)
 
-Decap CMS here uses the `github` backend, authenticated through Netlify's built-in OAuth provider. This avoids Netlify Identity/Git Gateway, which Netlify has marked deprecated for new setups. Anyone who logs in must have push access to the GitHub repository (owner or invited collaborator).
+The content editor here uses the `github` backend, authenticated through Netlify's built-in OAuth provider. This avoids Netlify Identity/Git Gateway, which Netlify has marked deprecated for new setups. Anyone who logs in must have push access to the GitHub repository (owner or invited collaborator).
 
 1. Create a GitHub OAuth App at [github.com/settings/developers](https://github.com/settings/developers) → "New OAuth App".
    - Homepage URL: your live Netlify URL (e.g. `https://your-site-name.netlify.app`)
@@ -52,7 +52,7 @@ Decap CMS here uses the `github` backend, authenticated through Netlify's built-
 3. In Netlify, go to Project configuration → Access & security → OAuth.
 4. Under Authentication Providers, select "Install provider" → GitHub, and paste in the Client ID and Client Secret. Save.
 5. Visit `https://your-site-name.netlify.app/admin/` and click "Login with GitHub".
-6. Authorize the app in the popup window — you'll be logged into Decap CMS.
+6. Authorize the app in the popup window — you'll be logged in and ready to edit.
 
 Adding another editor (e.g. the shop owner)
 
@@ -62,7 +62,7 @@ Adding another editor (e.g. the shop owner)
 
 If login fails
 
-- Make sure the site is deployed on Netlify; Decap login will not work from a local file preview.
+- Make sure the site is deployed on Netlify; the editor login will not work from a local file preview.
 - Make sure the GitHub OAuth App's callback URL is exactly `https://api.netlify.com/auth/done`.
 - Make sure the GitHub account logging in has push access to the repository.
 - If the popup closes with an error, double check the Client ID/Secret saved in Netlify's OAuth settings match the GitHub OAuth App.

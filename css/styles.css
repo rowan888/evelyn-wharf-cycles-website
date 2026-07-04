@@ -17,7 +17,7 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-he
 .site-header{display:flex;align-items:center;justify-content:space-between;padding:1rem;max-width:var(--max-width);margin:0 auto;border-bottom:var(--logo-line) solid #000;gap:1rem;position:relative;z-index:10}
 .brand{display:flex;align-items:center;gap:0.75rem}
 .logo{width:144px;max-width:28vw;height:auto;display:block}
-.brand-text{display:none}
+.brand-text{display:flex;flex-direction:column;justify-content:center}
 .brand-text h1{margin:0;font-size:1.25rem}
 .brand-text .sub{margin:0;color:var(--muted);font-size:0.9rem}
 .nav{display:flex;align-items:center;gap:1rem}
@@ -58,13 +58,9 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-he
 a:focus{outline:3px solid #ffdcae;outline-offset:3px}
 button:focus{outline:none;box-shadow:0 0 0 4px rgba(35,184,171,0.18)}
 
-/* Google reviews removed */
-
-
 /* Services grid */
 .services-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:var(--max-width);margin:1rem auto;padding:0 1rem}
 .services-preview article{background:#fff;border:1px solid #ddd;padding:1rem;border-radius:6px;text-align:center}
-.price-tag{font-weight:700;color:var(--coral);margin:.35rem 0 0}
 .services-page-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;max-width:var(--max-width);margin:1rem auto 0}
 .service-card{background:#fff;border:1px solid #ddd;padding:1rem;border-radius:6px}
 .gallery-card{background:#fff;border:1px solid #ddd;border-radius:8px;overflow:hidden;display:flex;flex-direction:column}

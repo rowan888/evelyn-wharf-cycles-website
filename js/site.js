@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     year.textContent = new Date().getFullYear();
   }
 
-  initCmsContent();
+  initSiteContent();
 });
 
-async function initCmsContent() {
+async function initSiteContent() {
   var site = await loadJson('content/site.json');
   var services = await loadJson('content/services.json');
   var bikes = await loadJson('content/bikes.json');
@@ -64,7 +64,7 @@ function renderHome(site, services) {
 
   if (servicesPreview && services && Array.isArray(services.services)) {
     servicesPreview.innerHTML = services.services.slice(0, 3).map(function (service) {
-      return '<article><h3>' + escapeHtml(service.title) + '</h3><p>' + escapeHtml(service.description) + '</p><p class="price-tag">' + escapeHtml(service.price) + '</p></article>';
+      return '<article><h3>' + escapeHtml(service.title) + '</h3><p>' + escapeHtml(service.description) + '</p></article>';
     }).join('');
   }
 }
@@ -111,7 +111,7 @@ function renderServicesPage(services) {
 
   if (list && Array.isArray(services.services)) {
     list.innerHTML = services.services.map(function (service) {
-      return '<section class="service-card"><h3>' + escapeHtml(service.title) + '</h3><p>' + escapeHtml(service.description) + '</p><p class="price-tag">' + escapeHtml(service.price) + '</p></section>';
+      return '<section class="service-card"><h3>' + escapeHtml(service.title) + '</h3><p>' + escapeHtml(service.description) + '</p></section>';
     }).join('');
   }
 }
@@ -131,7 +131,6 @@ function renderBikesPage(bikes) {
         + '<img src="' + escapeAttribute(bike.image) + '" alt="' + escapeAttribute(bike.name) + '">'
         + '<div class="gallery-card-body">'
         + '<h3>' + escapeHtml(bike.name) + '</h3>'
-        + '<p class="price-tag">' + escapeHtml(bike.price) + '</p>'
         + '<p>' + escapeHtml(bike.description) + '</p>'
         + '<p class="status-tag">' + escapeHtml(bike.status || 'Available') + '</p>'
         + '</div></article>';

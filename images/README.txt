@@ -1,6 +1,6 @@
 
-Place the shop image here as `ewc-logo.jpg`.
+The shop logo is stored here as `ewc-logo.png` and is already in use across the site.
 
-Suggested filename: ewc-logo.jpg
+Suggested filename: ewc-logo.png
 
-Copy the provided "EWC Logo" attachment into this folder with that filename so the site uses it as the main banner logo.
+To update the logo, replace this file with a new image saved using the same filename (ewc-logo.png).

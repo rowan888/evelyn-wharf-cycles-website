@@ -1,22 +1,19 @@
 {
   "title": "Services",
-  "intro": "Prices and descriptions below can be updated by the shop team in Decap CMS.",
-  "note": "Prices vary depending on condition. Contact us for a quote or to book a slot.",
+  "intro": "Here’s an overview of the work we do, from quick tune-ups to full restorations.",
+  "note": "Every bike is different, so get in touch for a free quote or to book a slot.",
   "services": [
     {
       "title": "Basic Service",
-      "description": "Brake and gear adjustment, safety check, tyre pressure and quick tune — ideal between major services.",
-      "price": "From £35"
+      "description": "Brake and gear adjustment, safety check, tyre pressure and quick tune — ideal between major services."
     },
     {
       "title": "Full Overhaul",
-      "description": "Strip, clean, replace bearings and consumables as needed, reassemble and test ride.",
-      "price": "From £95"
+      "description": "Strip, clean, replace bearings and consumables as needed, reassemble and test ride."
     },
     {
       "title": "Restoration & Sourcing",
-      "description": "We restore period bikes and can source hard-to-find parts for authentic restorations.",
-      "price": "Quote on request"
+      "description": "We restore period bikes and can source hard-to-find parts for authentic restorations."
     }
   ]
 }
