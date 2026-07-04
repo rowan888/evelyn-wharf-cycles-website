@@ -5,13 +5,13 @@
     {
       "name": "Vintage Road Bike",
       "description": "Steel frame, freshly serviced, ready to ride.",
-      "image": "/images/uploads/bike-1.jpg",
+      "image": "https://ibb.co/n8P6pLnr",
       "status": "Available"
     },
     {
       "name": "City Commuter",
       "description": "Comfortable upright position and reliable brakes.",
-      "image": "/images/uploads/bike-2.jpg",
+      "image": "/images/uploads/img_3192.jpg",
       "status": "Available"
     }
   ]
