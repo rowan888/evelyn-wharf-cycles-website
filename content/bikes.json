@@ -1,0 +1,20 @@
+{
+  "title": "Bike Gallery",
+  "intro": "Upload bike photos here and update the name, description, and price from the CMS.",
+  "bikes": [
+    {
+      "name": "Vintage Road Bike",
+      "price": "£240",
+      "description": "Steel frame, freshly serviced, ready to ride.",
+      "image": "/images/uploads/bike-1.jpg",
+      "status": "Available"
+    },
+    {
+      "name": "City Commuter",
+      "price": "£180",
+      "description": "Comfortable upright position and reliable brakes.",
+      "image": "/images/uploads/bike-2.jpg",
+      "status": "Available"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Lets you run the CMS locally (via `npx decap-server`) without logging in.
+# Netlify Identity is still used automatically once this is deployed live.
+local_backend: true
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+site_url: "/"
+display_url: "/"
+
+collections:
+  - name: "site"
+    label: "Site content"
+    files:
+      - file: "content/site.json"
+        label: "General site content"
+        name: "general"
+        fields:
+          - { name: brand, label: Brand, widget: string }
+          - { name: tagline, label: Tagline, widget: string }
+          -
+            name: home
+            label: Home page
+            widget: object
+            fields:
+              - { name: hero_title, label: Hero title, widget: string }
+              - { name: hero_text, label: Hero text, widget: text }
+              - { name: about_title, label: About preview title, widget: string }
+              - { name: about_text, label: About preview text, widget: text }
+          -
+            name: about
+            label: About page
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: intro, label: Intro text, widget: text }
+              - { name: values_title, label: Values title, widget: string }
+              -
+                name: values
+                label: Values
+                widget: list
+                field: { name: value, label: Value, widget: string }
+          -
+            name: contact
+            label: Contact page
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: intro, label: Intro text, widget: text }
+              - { name: address, label: Address, widget: string }
+              - { name: hours, label: Opening hours, widget: string }
+              - { name: phone, label: Phone number, widget: string }
+              - { name: phone_digits, label: Phone number digits only, widget: string }
+              - { name: email, label: Contact email, widget: string }
+              - { name: map_query, label: Map query, widget: string }
+          -
+            name: footer
+            label: Footer
+            widget: object
+            fields:
+              - { name: hours, label: Hours line, widget: string }
+              - { name: phone, label: Phone number, widget: string }
+              - { name: phone_digits, label: Phone number digits only, widget: string }
+
+      - file: "content/services.json"
+        label: "Services and prices"
+        name: "services"
+        fields:
+          - { name: title, label: Page title, widget: string }
+          - { name: intro, label: Intro text, widget: text }
+          - { name: note, label: Note text, widget: text }
+          -
+            name: services
+            label: Services
+            widget: list
+            fields:
+              - { name: title, label: Service title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: price, label: Price, widget: string }
+
+      - file: "content/bikes.json"
+        label: "Bike listings"
+        name: "bikes"
+        fields:
+          - { name: title, label: Page title, widget: string }
+          - { name: intro, label: Intro text, widget: text }
+          -
+            name: bikes
+            label: Bikes
+            widget: list
+            fields:
+              - { name: name, label: Bike name, widget: string }
+              - { name: price, label: Price, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: image, label: Image, widget: image }
+              - { name: status, label: Status, widget: string, default: "Available" }
