@@ -171,10 +171,12 @@ function renderFooter(site) {
   var footerHours = document.querySelector('[data-footer-hours]');
   var footerPhone = document.querySelector('[data-footer-phone]');
   var footerPhoneLink = document.querySelector('[data-footer-phone-link]');
+  var footerNote = document.querySelector('[data-footer-note]');
 
   if (footerHours) footerHours.textContent = site.footer.hours;
   if (footerPhone) footerPhone.textContent = site.footer.phone;
   if (footerPhoneLink) footerPhoneLink.setAttribute('href', 'tel:' + site.footer.phone_digits);
+  if (footerNote) footerNote.textContent = site.footer.note;
 }
 
 function escapeHtml(value) {
