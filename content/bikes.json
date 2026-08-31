@@ -8,13 +8,6 @@
       "description": "Steel frame, freshly serviced, ready to ride.",
       "image": "/images/uploads/img_3191.jpg",
       "status": "Available"
-    },
-    {
-      "status": "Available",
-      "image": "/images/uploads/img_3191.jpg",
-      "name": "Test",
-      "price": "£300",
-      "description": "Testestesttes\n\n\n"
     }
   ]
 }
