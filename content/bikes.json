@@ -10,15 +10,8 @@
       "status": "Available"
     },
     {
-      "name": "City Commuter",
-      "price": "£150",
-      "description": "Comfortable upright position and reliable brakes.",
-      "image": "/images/uploads/img_3192.jpg",
-      "status": "Available"
-    },
-    {
       "status": "Available",
-      "image": "/images/uploads/1000000020.jpg",
+      "image": "/images/uploads/img_3191.jpg",
       "name": "Test",
       "price": "£300",
       "description": "Testestesttes\n\n\n"
