@@ -19,9 +19,9 @@
     {
       "status": "Available",
       "image": "/images/uploads/1000000020.jpg",
-      "name": "T",
-      "price": "T",
-      "description": "T"
+      "name": "Test",
+      "price": "£300",
+      "description": "Testestesttes\n\n\n"
     }
   ]
 }
