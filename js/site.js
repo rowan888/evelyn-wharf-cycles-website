@@ -51,11 +51,21 @@ async function loadJson(path) {
 }
 
 function renderHome(site, services) {
+  var notice = document.querySelector('[data-home-notice]');
   var heroTitle = document.querySelector('[data-home-hero-title]');
   var heroText = document.querySelector('[data-home-hero-text]');
   var aboutTitle = document.querySelector('[data-home-about-title]');
   var aboutText = document.querySelector('[data-home-about-text]');
   var servicesPreview = document.querySelector('[data-services-preview]');
+
+  if (notice) {
+    if (site.home.notice) {
+      notice.textContent = site.home.notice;
+      notice.hidden = false;
+    } else {
+      notice.hidden = true;
+    }
+  }
 
   if (heroTitle) heroTitle.textContent = site.home.hero_title;
   if (heroText) heroText.textContent = site.home.hero_text;
