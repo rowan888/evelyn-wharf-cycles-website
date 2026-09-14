@@ -24,6 +24,7 @@ collections:
             label: Home page
             widget: object
             fields:
+              - { name: notice, label: Notice banner (leave blank to hide), widget: string, required: false }
               - { name: hero_title, label: Hero title, widget: string }
               - { name: hero_text, label: Hero text, widget: text }
               - { name: about_title, label: About preview title, widget: string }
