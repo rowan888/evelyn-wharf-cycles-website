@@ -16,6 +16,23 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   initSiteContent();
+
+  // attach call prompt to primary CTAs (e.g. "Book a service")
+  document.querySelectorAll('.cta').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var href = el.getAttribute('href') || '';
+      // If the link is already a tel: link, allow default behaviour
+      if (href.indexOf('tel:') === 0) return;
+      e.preventDefault();
+      var phoneLink = document.querySelector('[data-footer-phone-link]') || document.querySelector('[data-contact-phone]') || document.querySelector('a[href^="tel:"]');
+      var phoneHref = phoneLink ? phoneLink.getAttribute('href') : 'tel:07773137995';
+      var phoneText = phoneLink ? (phoneLink.textContent || phoneHref.replace('tel:', '')) : '07773 137995';
+      var confirmText = 'Call ' + phoneText + ' to book a service?';
+      if (window.confirm(confirmText)) {
+        window.location.href = phoneHref;
+      }
+    });
+  });
 });
 
 async function initSiteContent() {
@@ -160,7 +177,7 @@ function renderContact(site) {
     phone.setAttribute('href', 'tel:' + site.contact.phone_digits);
   }
   if (form) {
-    form.setAttribute('action', 'mailto:' + site.contact.email);
+    // email contact removed — form intentionally not used
   }
   if (iframe) {
     iframe.setAttribute('src', 'https://www.google.com/maps?q=' + encodeURIComponent(site.contact.map_query) + '&output=embed');
